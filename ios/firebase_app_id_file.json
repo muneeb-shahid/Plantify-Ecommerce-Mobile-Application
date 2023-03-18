@@ -1,0 +1,13 @@
+{
+  "file_generated_by": "FlutterFire CLI",
+  "purpose": "FirebaseAppID & ProjectID for this Firebase app in this directory",
+<<<<<<< HEAD
+  "GOOGLE_APP_ID": "1:468670435556:ios:08ce6d9f5d3f48d0159cf1",
+  "FIREBASE_PROJECT_ID": "plantify-e-commerce-app",
+  "GCM_SENDER_ID": "468670435556"
+=======
+  "GOOGLE_APP_ID": "1:368530559024:ios:020bbe69a44ab0a50a5df5",
+  "FIREBASE_PROJECT_ID": "flutter-application-7a708",
+  "GCM_SENDER_ID": "368530559024"
+>>>>>>> 1d1f2c53a143b849798c52179f2aa9483842915e
+}
