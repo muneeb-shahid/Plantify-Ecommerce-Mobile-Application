@@ -1,4 +1,4 @@
-# Hackathon Application
+# Plantify Ecommerce Mobile Application
   <span class="column">
     <img  align="left" src="https://user-images.githubusercontent.com/115135886/226126129-19736387-e267-4609-b86e-47cd52d25d5a.jpeg"  style="width:300"  height="500">
   </span>  
