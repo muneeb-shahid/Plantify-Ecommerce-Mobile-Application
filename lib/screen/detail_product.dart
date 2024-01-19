@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:hackthon_application/functions/detailproduct_function.dart';
+import 'package:hackthon_application/functions/detail_product_function.dart';
 
 import '../constants/color.dart';
-import 'Images_of_Product/images.dart';
+import 'images_of_product/images.dart';
 
 class DetailProductPage extends StatefulWidget {
   const DetailProductPage({super.key});
@@ -14,7 +12,7 @@ class DetailProductPage extends StatefulWidget {
 }
 
 class _DetailProductPageState extends State<DetailProductPage> {
-  DetailProduct_Function(productName, price,size,productImage) {
+  detailProductFunction(productName, price, size, productImage) {
     return Stack(
       children: [
         Container(
@@ -32,13 +30,13 @@ class _DetailProductPageState extends State<DetailProductPage> {
             bottom: 20,
             child: Container(
               alignment: Alignment.center,
-              child: Image(
+              child: const Image(
                   image: AssetImage('assets/images/detailproduct_circle.png')),
             )),
         Positioned(
             child: Container(
           alignment: Alignment.center,
-          child: Image(
+          child: const Image(
               image:
                   AssetImage('assets/images/detailproduct small circle.png')),
         )),
@@ -55,18 +53,18 @@ class _DetailProductPageState extends State<DetailProductPage> {
                           fontFamily: 'Poppins',
                           fontSize: 14,
                           fontWeight: FontWeight.w600,
-                          color: AppColors.app_black_Color),
+                          color: AppColors.appBlackColor),
                     ),
                     SizedBox(
                       width: MediaQuery.of(context).size.width * 0.05,
                     ),
-                    Image(
+                    const Image(
                         image:
                             AssetImage('assets/images/detailProduct hand.png')),
                     SizedBox(
                       width: MediaQuery.of(context).size.width * 0.35,
                     ),
-                    Image(image: AssetImage('assets/images/rating.png')),
+                    const Image(image: AssetImage('assets/images/rating.png')),
                   ],
                 )
               ],
@@ -84,7 +82,7 @@ class _DetailProductPageState extends State<DetailProductPage> {
                       letterSpacing: 3,
                       fontWeight: FontWeight.w700,
                       fontSize: 38,
-                      color: AppColors.app_black_Color),
+                      color: AppColors.appBlackColor),
                 ))),
         Positioned(
             top: 170,
@@ -95,7 +93,7 @@ class _DetailProductPageState extends State<DetailProductPage> {
                   fontFamily: 'Poppins',
                   fontWeight: FontWeight.w600,
                   fontSize: 12,
-                  color: AppColors.app_black_Color),
+                  color: AppColors.appBlackColor),
             )),
         Positioned(
             top: 190,
@@ -106,7 +104,7 @@ class _DetailProductPageState extends State<DetailProductPage> {
                   fontFamily: 'Poppins',
                   fontWeight: FontWeight.bold,
                   fontSize: 16,
-                  color: AppColors.app_black_Color),
+                  color: AppColors.appBlackColor),
             )),
         Positioned(
             top: 250,
@@ -117,7 +115,7 @@ class _DetailProductPageState extends State<DetailProductPage> {
                   fontFamily: 'Poppins',
                   fontWeight: FontWeight.w600,
                   fontSize: 12,
-                  color: AppColors.app_black_Color),
+                  color: AppColors.appBlackColor),
             )),
         Positioned(
             top: 270,
@@ -128,27 +126,25 @@ class _DetailProductPageState extends State<DetailProductPage> {
                 fontFamily: 'Poppins',
                 fontWeight: FontWeight.bold,
                 fontSize: 16,
-                color: AppColors.app_black_Color,
+                color: AppColors.appBlackColor,
               ),
             )),
-        Positioned(
+        const Positioned(
             bottom: -10,
             left: 50,
             child: Image(
                 image: AssetImage('assets/images/detailproduct_add.png'))),
-        Positioned(
+        const Positioned(
             bottom: 10,
             left: 140,
             child: Image(image: AssetImage('assets/images/black heart.png'))),
         Positioned(
             bottom: 0,
             left: 70,
-            child: Container(
+            child: SizedBox(
                 height: MediaQuery.of(context).size.height * 0.39,
                 width: MediaQuery.of(context).size.width * 1,
-                child: Image(image: AssetImage(productImage)
-                )
-                )),
+                child: Image(image: AssetImage(productImage)))),
       ],
     );
   }
@@ -156,11 +152,11 @@ class _DetailProductPageState extends State<DetailProductPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: detailPage_Function.buildAppBar(),
+      appBar: DetailPageFunction.buildAppBar(),
       body: Column(
         children: [
-          DetailProduct_Function("Watermelon\nPeperomia", '350', "5.1", Images().sage),
-          
+          detailProductFunction(
+              "Watermelon\nPeperomia", '350', "5.1", Images().sage),
           Expanded(
               child: SingleChildScrollView(
             child: Column(
@@ -176,7 +172,7 @@ class _DetailProductPageState extends State<DetailProductPage> {
                             fontFamily: 'Poppins',
                             fontWeight: FontWeight.w700,
                             fontSize: 14,
-                            color: AppColors.app_black_Color),
+                            color: AppColors.appBlackColor),
                       ),
                     ),
                   ],
@@ -184,11 +180,11 @@ class _DetailProductPageState extends State<DetailProductPage> {
                 Column(
                   children: [
                     ListTile(
-                      leading: Container(
+                      leading: SizedBox(
                         width: MediaQuery.of(context).size.width * 0.1,
                         height: MediaQuery.of(context).size.height * 0.1,
-                        child:
-                            Image(image: AssetImage('assets/images/drop.png')),
+                        child: const Image(
+                            image: AssetImage('assets/images/drop.png')),
                       ),
                       title: Text(
                         '250ml',
@@ -196,7 +192,7 @@ class _DetailProductPageState extends State<DetailProductPage> {
                             fontFamily: 'Poppins',
                             fontWeight: FontWeight.w600,
                             fontSize: 13,
-                            color: AppColors.app_Green_Color),
+                            color: AppColors.appGreenColor),
                       ),
                       subtitle: Text(
                         'WATER',
@@ -204,15 +200,15 @@ class _DetailProductPageState extends State<DetailProductPage> {
                             fontFamily: 'Poppins',
                             fontWeight: FontWeight.w600,
                             fontSize: 9,
-                            color: AppColors.app_black_Color),
+                            color: AppColors.appBlackColor),
                       ),
                     ),
                     ListTile(
-                      leading: Container(
+                      leading: SizedBox(
                         width: MediaQuery.of(context).size.width * 0.1,
                         height: MediaQuery.of(context).size.height * 0.1,
-                        child:
-                            Image(image: AssetImage('assets/images/sun.png')),
+                        child: const Image(
+                            image: AssetImage('assets/images/sun.png')),
                       ),
                       title: Text(
                         '35-40%',
@@ -220,7 +216,7 @@ class _DetailProductPageState extends State<DetailProductPage> {
                             fontFamily: 'Poppins',
                             fontWeight: FontWeight.w600,
                             fontSize: 13,
-                            color: AppColors.app_Green_Color),
+                            color: AppColors.appGreenColor),
                       ),
                       subtitle: Text(
                         'Light',
@@ -228,14 +224,14 @@ class _DetailProductPageState extends State<DetailProductPage> {
                             fontFamily: 'Poppins',
                             fontWeight: FontWeight.w600,
                             fontSize: 9,
-                            color: AppColors.app_black_Color),
+                            color: AppColors.appBlackColor),
                       ),
                     ),
                     ListTile(
-                      leading: Container(
+                      leading: SizedBox(
                         width: MediaQuery.of(context).size.width * 0.1,
                         height: MediaQuery.of(context).size.height * 0.1,
-                        child: Image(
+                        child: const Image(
                             image: AssetImage('assets/images/fertilizer.png')),
                       ),
                       title: Text(
@@ -244,7 +240,7 @@ class _DetailProductPageState extends State<DetailProductPage> {
                             fontFamily: 'Poppins',
                             fontWeight: FontWeight.w600,
                             fontSize: 13,
-                            color: AppColors.app_Green_Color),
+                            color: AppColors.appGreenColor),
                       ),
                       subtitle: Text(
                         'Fertilizer',
@@ -252,7 +248,7 @@ class _DetailProductPageState extends State<DetailProductPage> {
                             fontFamily: 'Poppins',
                             fontWeight: FontWeight.w600,
                             fontSize: 9,
-                            color: AppColors.app_black_Color),
+                            color: AppColors.appBlackColor),
                       ),
                     ),
                     Column(
@@ -267,7 +263,7 @@ class _DetailProductPageState extends State<DetailProductPage> {
                                     fontFamily: 'Poppins',
                                     fontWeight: FontWeight.w700,
                                     fontSize: 14,
-                                    color: AppColors.app_black_Color),
+                                    color: AppColors.appBlackColor),
                               ),
                             ),
                           ],
@@ -284,7 +280,7 @@ class _DetailProductPageState extends State<DetailProductPage> {
                                     fontFamily: 'Philosopher',
                                     fontWeight: FontWeight.w400,
                                     fontSize: 15,
-                                    color: AppColors.app_black_Color),
+                                    color: AppColors.appBlackColor),
                               ),
                             ),
                           ],
@@ -298,63 +294,63 @@ class _DetailProductPageState extends State<DetailProductPage> {
                                 scrollDirection: Axis.horizontal,
                                 child: Row(
                                   children: [
-                                    Image(
+                                    const Image(
                                         image: AssetImage(
                                             "assets/images/video.png")),
                                     SizedBox(
                                       width: MediaQuery.of(context).size.width *
                                           0.03,
                                     ),
-                                    Image(
+                                    const Image(
                                         image: AssetImage(
                                             'assets/images/image 29.png')),
                                     SizedBox(
                                       width: MediaQuery.of(context).size.width *
                                           0.03,
                                     ),
-                                    Image(
+                                    const Image(
                                         image: AssetImage(
                                             'assets/images/image 27.png')),
                                     SizedBox(
                                       width: MediaQuery.of(context).size.width *
                                           0.03,
                                     ),
-                                    Image(
+                                    const Image(
                                         image: AssetImage(
                                             "assets/images/video.png")),
                                     SizedBox(
                                       width: MediaQuery.of(context).size.width *
                                           0.03,
                                     ),
-                                    Image(
+                                    const Image(
                                         image: AssetImage(
                                             'assets/images/image 29.png')),
                                     SizedBox(
                                       width: MediaQuery.of(context).size.width *
                                           0.03,
                                     ),
-                                    Image(
+                                    const Image(
                                         image: AssetImage(
                                             'assets/images/image 27.png')),
                                     SizedBox(
                                       width: MediaQuery.of(context).size.width *
                                           0.03,
                                     ),
-                                    Image(
+                                    const Image(
                                         image: AssetImage(
                                             "assets/images/video.png")),
                                     SizedBox(
                                       width: MediaQuery.of(context).size.width *
                                           0.03,
                                     ),
-                                    Image(
+                                    const Image(
                                         image: AssetImage(
                                             'assets/images/image 29.png')),
                                     SizedBox(
                                       width: MediaQuery.of(context).size.width *
                                           0.03,
                                     ),
-                                    Image(
+                                    const Image(
                                         image: AssetImage(
                                             'assets/images/image 27.png')),
                                     SizedBox(

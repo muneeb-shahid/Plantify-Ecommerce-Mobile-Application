@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 import '../constants/color.dart';
 
-class detailPage_Function {
+class DetailPageFunction {
   static AppBar buildAppBar() {
     return AppBar(
-      backgroundColor: AppColors.app_light_blue_Color,
+      backgroundColor: AppColors.appLightBlueColor,
       elevation: 0,
-      leading: InkWell(
+      leading: const InkWell(
         child: Image(
           image: AssetImage("assets/images/detailProduct logo.png"),
         ),
@@ -15,21 +15,21 @@ class detailPage_Function {
       title: Text(
         'PLANTIFY',
         style: TextStyle(
-          fontFamily: 'Philosopher',
+            fontFamily: 'Philosopher',
             letterSpacing: 4,
             fontSize: 20,
             fontWeight: FontWeight.w700,
-            color: AppColors.app_black_Color),
+            color: AppColors.appBlackColor),
       ),
       actions: [
         InkWell(
           onTap: (() {}),
-          child: Icon(
+          child: const Icon(
             Icons.search,
             color: Colors.black,
           ),
         ),
-        InkWell(
+        const InkWell(
           child: Image(
             image: AssetImage('assets/images/detailProduct filter.png'),
           ),

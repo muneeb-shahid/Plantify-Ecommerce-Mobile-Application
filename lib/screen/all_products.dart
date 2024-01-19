@@ -1,10 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:hackthon_application/constants/color.dart';
-import 'package:hackthon_application/functions/detailproduct_function.dart';
-import 'Images_of_Product/images.dart';
+import 'images_of_product/images.dart';
 import 'package:flutter/material.dart';
-import 'package:hackthon_application/screen/detailproduct.dart';
-import 'detailproduct.dart';
+import 'package:hackthon_application/screen/detail_product.dart';
 import 'order.dart';
 
 class TopPick extends StatelessWidget {
@@ -39,18 +37,18 @@ class TopPick extends StatelessWidget {
         Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => DetailProductPage(),
+              builder: (context) => const DetailProductPage(),
             ));
       },
       child: Stack(
         children: [
           Padding(
             padding: const EdgeInsets.all(5),
-            child: Container(
+            child: SizedBox(
               height: MediaQuery.of(context).size.height * 0.22,
               child: Image(
                 color: rectangularColor,
-                image: AssetImage("assets/images/Rectangle 27.png"),
+                image: const AssetImage("assets/images/Rectangle 27.png"),
                 width: MediaQuery.of(context).size.width * 0.8,
                 fit: BoxFit.fill,
               ),
@@ -58,15 +56,15 @@ class TopPick extends StatelessWidget {
           ),
           Positioned(
             child: Image(
-                color: AppColors.app_white_Color,
-                image: AssetImage('assets/images/Vector1.png')),
+                color: AppColors.appWhiteColor,
+                image: const AssetImage('assets/images/Vector1.png')),
           ),
           Positioned(
             top: 20,
             right: 10,
             child: Image(
-                color: AppColors.app_white_Color,
-                image: AssetImage('assets/images/Vector2.png')),
+                color: AppColors.appWhiteColor,
+                image: const AssetImage('assets/images/Vector2.png')),
           ),
           Positioned(
               left: 30,
@@ -78,7 +76,7 @@ class TopPick extends StatelessWidget {
                     children: [
                       Text(
                         companyName,
-                        style: TextStyle(
+                        style: const TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.w600,
                             color: Colors.black),
@@ -103,7 +101,7 @@ class TopPick extends StatelessWidget {
                   alignment: Alignment.center,
                   child: Text(
                     productName,
-                    style: TextStyle(
+                    style: const TextStyle(
                         fontWeight: FontWeight.w700,
                         fontSize: 22,
                         color: Colors.black),
@@ -113,7 +111,7 @@ class TopPick extends StatelessWidget {
               top: 120,
               child: Text(
                 productPrice,
-                style: TextStyle(
+                style: const TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w600,
                     color: Colors.black),
@@ -133,10 +131,10 @@ class TopPick extends StatelessWidget {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => OrderScreen(),
+                      builder: (context) => const OrderScreen(),
                     ));
               },
-              child: Image(
+              child: const Image(
                   height: 70,
                   width: 70,
                   image: AssetImage('assets/images/detailproduct_add.png')),
@@ -145,7 +143,7 @@ class TopPick extends StatelessWidget {
           Positioned(
               top: 8,
               right: -20,
-              child: Container(
+              child: SizedBox(
                 height: MediaQuery.of(context).size.height * 0.2,
                 child: Image(
                   image: AssetImage(productImage),
@@ -175,9 +173,8 @@ class TopPick extends StatelessWidget {
                                 'Air Purifier',
                                 'Watermelon',
                                 '200',
-                                Images().PeperomiaObtusfolia,
-                                AppColors.app_Green_Color),
-                            
+                                Images().peperomiaObtusfolia,
+                                AppColors.appGreenColor),
                             invitation(),
                             topPick(
                                 context,
@@ -185,14 +182,14 @@ class TopPick extends StatelessWidget {
                                 'Croton Petra',
                                 '900',
                                 Images().sage,
-                                AppColors.app_light_brown_green_Color),
+                                AppColors.appLightBrownGreenColor),
                             topPick(
                                 context,
                                 'Air Purifier',
                                 'Croton Petra',
                                 '900',
-                                Images().interior_medium_light,
-                                AppColors.app_light_yellow_Color),
+                                Images().interiorMediumLight,
+                                AppColors.appLightYellowColor),
                             videoAd(),
                             topPick(
                                 context,
@@ -200,21 +197,21 @@ class TopPick extends StatelessWidget {
                                 'Croton Petra',
                                 '900',
                                 Images().layer8,
-                                AppColors.app_light_blue_Color),
+                                AppColors.appLightBlueColor),
                             topPick(
                                 context,
                                 'Air Purifier',
                                 'Croton Petra',
                                 '900',
                                 Images().layer27,
-                                AppColors.app_light_sand_Color),
+                                AppColors.appLightSandColor),
                             text(),
                           ],
                         ),
                       );
                     });
               } else {
-                return CircularProgressIndicator();
+                return const CircularProgressIndicator();
               }
             }),
       ),
@@ -238,7 +235,7 @@ text() {
                     fontFamily: 'Poppins',
                     fontSize: 36,
                     fontWeight: FontWeight.w700,
-                    color: AppColors.app_black_Color),
+                    color: AppColors.appBlackColor),
               ),
             ),
           ],
@@ -254,16 +251,16 @@ text() {
                     fontFamily: 'Poppins',
                     fontSize: 28,
                     fontWeight: FontWeight.w700,
-                    color: AppColors.app_black_Color),
+                    color: AppColors.appBlackColor),
               ),
             ),
           ],
         ),
-        Row(
+        const Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.only(left: 30),
+              padding: EdgeInsets.only(left: 30),
               child: Text(
                 "Spread the joy",
                 style: TextStyle(
@@ -283,11 +280,11 @@ text() {
 videoAd() {
   return Stack(
     children: [
-      Container(
+      const SizedBox(
         height: 250,
         width: 350,
       ),
-      Positioned(
+      const Positioned(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -310,7 +307,7 @@ videoAd() {
             style: TextStyle(
                 fontSize: 13,
                 fontWeight: FontWeight.w500,
-                color: AppColors.app_black_Color,
+                color: AppColors.appBlackColor,
                 fontFamily: 'Poppins'),
           ),
         ),
@@ -322,12 +319,12 @@ videoAd() {
 invitation() {
   return Stack(
     children: [
-      Container(
+      SizedBox(
         height: 150,
         width: 300,
         child: Image.asset("assets/images/Invitation Rectangle.png"),
       ),
-      Positioned(
+      const Positioned(
           top: 25,
           left: 15,
           child: Text(
@@ -347,7 +344,7 @@ invitation() {
                 fontFamily: 'Poppins',
                 fontWeight: FontWeight.w600,
                 fontSize: 13,
-                color: AppColors.app_Green_Color),
+                color: AppColors.appGreenColor),
           )),
       Positioned(
         top: 80,
@@ -359,9 +356,9 @@ invitation() {
             width: 60,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(5),
-              color: AppColors.app_Green_Color,
+              color: AppColors.appGreenColor,
             ),
-            child: Center(
+            child: const Center(
                 child: Text(
               'Invite',
               style: TextStyle(
@@ -373,7 +370,7 @@ invitation() {
           ),
         ),
       ),
-      Positioned(
+      const Positioned(
           bottom: 25,
           right: 5,
           child: Image(

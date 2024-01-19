@@ -5,14 +5,12 @@ import 'package:hackthon_application/constants/color.dart';
 import 'package:hackthon_application/constants/color.dart';
 
 class DrawerScreen extends StatefulWidget {
-   DrawerScreen({
+  const DrawerScreen({
     super.key,
   });
   @override
   State<DrawerScreen> createState() => _DrawerScreenState();
 }
-
-
 
 class _DrawerScreenState extends State<DrawerScreen> {
   TextEditingController email = TextEditingController();
@@ -21,18 +19,18 @@ class _DrawerScreenState extends State<DrawerScreen> {
     return Scaffold(
         appBar: AppBar(
           elevation: 0,
-          backgroundColor: AppColors.app_Green_Color,
+          backgroundColor: AppColors.appGreenColor,
         ),
         drawer: Drawer(
-          backgroundColor: AppColors.app_Green_Color,
+          backgroundColor: AppColors.appGreenColor,
           child: ListView(
-            padding: EdgeInsets.only(top: 200, left: 20, right: 20),
+            padding: const EdgeInsets.only(top: 200, left: 20, right: 20),
             children: [
               ListTile(
-                leading: Image(
+                leading: const Image(
                     image: AssetImage('assets/images/drawer shop icon.png')),
-                title: Center(
-                    child: const Text(
+                title: const Center(
+                    child: Text(
                   'Shop',
                   style: TextStyle(
                       fontFamily: 'Poppins',
@@ -45,10 +43,10 @@ class _DrawerScreenState extends State<DrawerScreen> {
                 },
               ),
               ListTile(
-                leading: Image(
+                leading: const Image(
                     image: AssetImage('assets/images/DRAWER PLANT CARE.png')),
-                title: Center(
-                    child: const Text(
+                title: const Center(
+                    child: Text(
                   'Plant Care',
                   style: TextStyle(
                     fontSize: 22,
@@ -62,10 +60,10 @@ class _DrawerScreenState extends State<DrawerScreen> {
                 },
               ),
               ListTile(
-                leading: Image(
+                leading: const Image(
                     image: AssetImage('assets/images/drawer community.png')),
-                title: Center(
-                    child: const Text(
+                title: const Center(
+                    child: Text(
                   'Community',
                   style: TextStyle(
                       fontFamily: 'Poppins',
@@ -78,10 +76,10 @@ class _DrawerScreenState extends State<DrawerScreen> {
                 },
               ),
               ListTile(
-                leading: Image(
+                leading: const Image(
                     image: AssetImage('assets/images/drawer account.png')),
-                title: Center(
-                    child: const Text(
+                title: const Center(
+                    child: Text(
                   'My Account',
                   style: TextStyle(
                       fontFamily: 'Poppins',
@@ -94,10 +92,10 @@ class _DrawerScreenState extends State<DrawerScreen> {
                 },
               ),
               ListTile(
-                leading:
-                    Image(image: AssetImage('assets/images/drawer truck.png')),
-                title: Center(
-                    child: const Text(
+                leading: const Image(
+                    image: AssetImage('assets/images/drawer truck.png')),
+                title: const Center(
+                    child: Text(
                   'Track Order',
                   style: TextStyle(
                       fontFamily: 'Poppins',
@@ -112,9 +110,9 @@ class _DrawerScreenState extends State<DrawerScreen> {
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.1,
               ),
-              ListTile(
+              const ListTile(
                 title: Center(
-                    child: const Text(
+                    child: Text(
                   'Get the dirt',
                   style: TextStyle(
                       fontFamily: 'Poppins',
@@ -127,75 +125,73 @@ class _DrawerScreenState extends State<DrawerScreen> {
                 height: MediaQuery.of(context).size.height * 0.02,
               ),
               TextFormField(
-                
                 controller: email,
                 decoration: InputDecoration(
                   enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(2),
-                  borderSide: BorderSide(
-                    width: 2,
-                    color: AppColors.app_white_Color
+                    borderRadius: BorderRadius.circular(2),
+                    borderSide:
+                        BorderSide(width: 2, color: AppColors.appWhiteColor),
                   ),
-                ),
                   focusedBorder: OutlineInputBorder(
-
-                  borderRadius: BorderRadius.circular(2),
-                  borderSide: BorderSide(
-                    width: 2,
-                    color: AppColors.app_white_Color,
+                    borderRadius: BorderRadius.circular(2),
+                    borderSide: BorderSide(
+                      width: 2,
+                      color: AppColors.appWhiteColor,
+                    ),
                   ),
-                ),
-                  hintText:'Enter your Email',
-                  hintStyle: TextStyle(color: AppColors.app_white_Color), 
-                  border: OutlineInputBorder(
+                  hintText: 'Enter your Email',
+                  hintStyle: TextStyle(color: AppColors.appWhiteColor),
+                  border: const OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.white)),
                 ),
               ),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.02,
               ),
-              Center(
+              const Center(
                 child: Text(
-                    'FAQ',
-                    style: TextStyle(
-                        fontFamily: 'Poppins',
-                        color: Colors.white,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w600),
-                  ),
-              ),SizedBox(
-                height: MediaQuery.of(context).size.height * 0.02,
-              ),
-                Center(
-                  child: Text(
-                    'About US',
-                    style: TextStyle(
-                        fontFamily: 'Poppins',
-                        color: Colors.white,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w600),
-                  ),
-                ),SizedBox(
-                height: MediaQuery.of(context).size.height * 0.02,
-              ),
-                Center(
-                  child: Text(
-                    'Contact Us',
-                    style: TextStyle(
-                        fontFamily: 'Poppins',
-                        color: Colors.white,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w600),
-                  ),
+                  'FAQ',
+                  style: TextStyle(
+                      fontFamily: 'Poppins',
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600),
                 ),
-                SizedBox(
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.02,
+              ),
+              const Center(
+                child: Text(
+                  'About US',
+                  style: TextStyle(
+                      fontFamily: 'Poppins',
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600),
+                ),
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.02,
+              ),
+              const Center(
+                child: Text(
+                  'Contact Us',
+                  style: TextStyle(
+                      fontFamily: 'Poppins',
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600),
+                ),
+              ),
+              SizedBox(
                 height: MediaQuery.of(context).size.height * 0.1,
               ),
             ],
           ),
         ),
         body: Container(
-          color: AppColors.app_Green_Color,
+          color: AppColors.appGreenColor,
         ));
   }
 }

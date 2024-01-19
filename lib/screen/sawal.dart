@@ -35,19 +35,19 @@ class _SawalState extends State<Sawal> {
                           fit: BoxFit.cover,
                         )),
                     Positioned(
-                      child: Container(
+                      child: SizedBox(
                           height: MediaQuery.of(context).size.height * 0.60,
                           width: MediaQuery.of(context).size.width * 1,
                           child: Image.asset(
-                        'assets/images/sawal Vector.png',
-                        // height: MediaQuery.of(context).size.height * 0.50,
-                        // width: MediaQuery.of(context).size.width * 1,
-                        fit: BoxFit.cover,
-                      )),
+                            'assets/images/sawal Vector.png',
+                            // height: MediaQuery.of(context).size.height * 0.50,
+                            // width: MediaQuery.of(context).size.width * 1,
+                            fit: BoxFit.cover,
+                          )),
                     ),
                     Positioned(
                       bottom: 0.01,
-                      child: Container(
+                      child: SizedBox(
                         height: MediaQuery.of(context).size.height * 0.70,
                         width: MediaQuery.of(context).size.width * 0.70,
                         child: Image.asset(
@@ -61,13 +61,14 @@ class _SawalState extends State<Sawal> {
                     Positioned(
                       // top: 400,
                       bottom: 60,
-                      child: Container(
+                      child: SizedBox(
                           child: Text(
                         "PLANTIFY",
-                        style: TextStyle(fontFamily: 'Philosopher',
+                        style: TextStyle(
+                            fontFamily: 'Philosopher',
                             fontSize: 50,
                             fontWeight: FontWeight.w700,
-                            color: AppColors.app_white_Color,
+                            color: AppColors.appWhiteColor,
                             letterSpacing: 10),
                       )),
                     ),
@@ -78,38 +79,40 @@ class _SawalState extends State<Sawal> {
           ),
           Row(
             children: [
-              Container(
+              SizedBox(
                 child: Padding(
                   padding: const EdgeInsets.only(left: 20, top: 30),
                   child: Text(
-                      "GET READY\nBE HIGYENIC",
-                      style: TextStyle(fontFamily: 'Philosopher',
-                          wordSpacing: 7,
-                          color: AppColors.app_Green_Color,
-                          fontWeight: FontWeight.w700,
-                          fontSize: 26),
-                    ),
+                    "GET READY\nBE HIGYENIC",
+                    style: TextStyle(
+                        fontFamily: 'Philosopher',
+                        wordSpacing: 7,
+                        color: AppColors.appGreenColor,
+                        fontWeight: FontWeight.w700,
+                        fontSize: 26),
+                  ),
                 ),
-              
               ),
             ],
           ),
-          Container(
+          SizedBox(
             child: Padding(
-              padding: const EdgeInsets.only(left: 20, top: 30,right: 20),
+              padding: const EdgeInsets.only(left: 20, top: 30, right: 20),
               child: Text(
                 "Jelajahi AiLearn untuk menambah kemampuanmu dalam mengoperasikan Adobe Illustrator",
-                textAlign: TextAlign.justify,  style: TextStyle(fontFamily: 'Inter',
+                textAlign: TextAlign.justify,
+                style: TextStyle(
+                    fontFamily: 'Inter',
                     wordSpacing: 3,
-                    color: AppColors.app_Green_Color,
+                    color: AppColors.appGreenColor,
                     fontWeight: FontWeight.w400,
                     fontSize: 14),
               ),
             ),
           ),
-          Container(
+          SizedBox(
             child: Padding(
-             padding: const EdgeInsets.only(left: 20, top: 30,right: 20),
+              padding: const EdgeInsets.only(left: 20, top: 30, right: 20),
               child: GestureDetector(
                 onTap: () {
                   Navigator.pushReplacement(
@@ -123,15 +126,16 @@ class _SawalState extends State<Sawal> {
                   width: MediaQuery.of(context).size.width * 0.90,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30),
-                    color: AppColors.app_Green_Color,
+                    color: AppColors.appGreenColor,
                   ),
                   child: Center(
                       child: Text(
                     'Get Started',
-                    style: TextStyle(fontFamily: 'Inter',
+                    style: TextStyle(
+                        fontFamily: 'Inter',
                         fontSize: 18,
                         fontWeight: FontWeight.w700,
-                        color: AppColors.app_white_Color),
+                        color: AppColors.appWhiteColor),
                   )),
                 ),
               ),

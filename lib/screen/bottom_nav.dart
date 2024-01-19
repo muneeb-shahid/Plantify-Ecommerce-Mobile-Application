@@ -1,13 +1,4 @@
-// import 'package:flutter/material.dart';
-// import 'package:flutter/src/widgets/container.dart';
-// import 'package:flutter/src/widgets/framework.dart';
-
-// import '../componets/tabbar.dart';
-// import 'home.dart';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import 'home.dart';
 
 class BottomNav extends StatefulWidget {
@@ -20,14 +11,14 @@ class BottomNav extends StatefulWidget {
 class _BottomNavState extends State<BottomNav> {
   int currentindex = 0;
   final screens = [
-    Center(
+    const Center(
       child: HomeView(),
     ),
-    Center(
+    const Center(
       child: Text("Favorite"),
     ),
-    Center(child: Text("Shopping")),
-    Center(child: Text("User")),
+    const Center(child: Text("Shopping")),
+    const Center(child: Text("User")),
   ];
   @override
   Widget build(BuildContext context) {
@@ -44,7 +35,7 @@ class _BottomNavState extends State<BottomNav> {
             onTap: (index) => setState(() {
                   currentindex = index;
                 }),
-            items: [
+            items: const [
               BottomNavigationBarItem(
                 icon: Icon(
                   Icons.home_outlined,

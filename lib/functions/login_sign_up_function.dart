@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../constants/color.dart';
 
-class login_Signup_function {
-  login_signup_constants(String heading, String paragraph) {
+class LoginSignupFunction {
+  loginSignupConstants(String heading, String paragraph) {
     return Column(
       children: [
         Row(
@@ -11,15 +11,16 @@ class login_Signup_function {
           children: [
             Text(
               heading,
-              style: TextStyle(fontFamily: 'Philosopher',
+              style: TextStyle(
+                  fontFamily: 'Philosopher',
                   fontSize: 36,
                   fontWeight: FontWeight.w700,
-                  color: AppColors.app_Green_Color,
+                  color: AppColors.appGreenColor,
                   letterSpacing: 1),
             ),
           ],
         ),
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
         Row(
@@ -27,9 +28,10 @@ class login_Signup_function {
           children: [
             Text(
               paragraph,
-              style: TextStyle(fontFamily: 'Poppins',
+              style: TextStyle(
+                  fontFamily: 'Poppins',
                   wordSpacing: 3,
-                  color: AppColors.app_Green_Color,
+                  color: AppColors.appGreenColor,
                   fontWeight: FontWeight.w400,
                   fontSize: 14),
             ),

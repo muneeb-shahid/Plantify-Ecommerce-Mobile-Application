@@ -1,13 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:hackthon_application/screen/detailproduct.dart';
 import 'package:hackthon_application/screen/drawer.dart';
-
-import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:hackthon_application/screen/drawer.dart';
-
 import '../constants/color.dart';
 import 'all_products.dart';
 
@@ -22,12 +14,13 @@ class _HomeViewState extends State<HomeView> {
   AppBar buildAppBar() {
     return AppBar(
       bottom: TabBar(
-          indicator: BoxDecoration(color: Colors.transparent),
+          indicator: const BoxDecoration(color: Colors.transparent),
           indicatorSize: TabBarIndicatorSize.label,
-          labelStyle: TextStyle(fontWeight: FontWeight.w600, fontSize: 20),
+          labelStyle:
+              const TextStyle(fontWeight: FontWeight.w600, fontSize: 20),
           unselectedLabelColor: Colors.black,
           isScrollable: true,
-          tabs: [
+          tabs: const [
             Center(
                 child: Text(
               "Top Pick",
@@ -73,15 +66,15 @@ class _HomeViewState extends State<HomeView> {
               ),
             )),
           ],
-          labelColor: AppColors.app_Green_Color,
-          indicatorColor: AppColors.app_Green_Color,
+          labelColor: AppColors.appGreenColor,
+          indicatorColor: AppColors.appGreenColor,
           automaticIndicatorColorAdjustment: false,
-          labelPadding: EdgeInsets.symmetric(horizontal: 20)),
+          labelPadding: const EdgeInsets.symmetric(horizontal: 20)),
       backgroundColor: Colors.white,
       elevation: 0,
       leading: InkWell(
         onTap: (() {}),
-        child: Image(
+        child: const Image(
           image: AssetImage("assets/images/login screen logo.jpeg"),
         ),
       ),
@@ -91,13 +84,13 @@ class _HomeViewState extends State<HomeView> {
             fontFamily: 'Philosopher',
             fontSize: 20,
             fontWeight: FontWeight.w700,
-            color: AppColors.app_black_Color,
+            color: AppColors.appBlackColor,
             letterSpacing: 4),
       ),
       actions: [
         InkWell(
           onTap: (() {}),
-          child: Image(
+          child: const Image(
             image: AssetImage("assets/images/bell.png"),
           ),
         ),
@@ -106,10 +99,10 @@ class _HomeViewState extends State<HomeView> {
             Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => DrawerScreen(),
+                  builder: (context) => const DrawerScreen(),
                 ));
           },
-          child: Image(
+          child: const Image(
             image: AssetImage("assets/images/filter.jpeg"),
           ),
         ),
@@ -130,8 +123,6 @@ class _HomeViewState extends State<HomeView> {
             TopPick(),
             TopPick(),
             TopPick(),
-
-            
           ],
         ),
       ),

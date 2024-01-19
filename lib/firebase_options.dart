@@ -47,7 +47,6 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-<<<<<<< HEAD
     apiKey: 'AIzaSyASjSgZXh6pIfbhdKyT82Lt6CqLCz2e0iY',
     appId: '1:468670435556:web:f5bc216bfd5d21dd159cf1',
     messagingSenderId: '468670435556',
@@ -72,31 +71,6 @@ class DefaultFirebaseOptions {
     projectId: 'plantify-e-commerce-app',
     storageBucket: 'plantify-e-commerce-app.appspot.com',
     iosClientId: '468670435556-q6hqnrp7ba10jd3a4jat1g03lv9f2hqd.apps.googleusercontent.com',
-=======
-    apiKey: 'AIzaSyAB8bOO82HfCFsdEE5wPxHFc5MDZXxpfEw',
-    appId: '1:368530559024:web:6ed90f20572e25940a5df5',
-    messagingSenderId: '368530559024',
-    projectId: 'flutter-application-7a708',
-    authDomain: 'flutter-application-7a708.firebaseapp.com',
-    storageBucket: 'flutter-application-7a708.appspot.com',
-  );
-
-  static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCChxgDDGhQNrraJ1eDbOxs6-PJKD05mLc',
-    appId: '1:368530559024:android:073e4530d0bdd9d90a5df5',
-    messagingSenderId: '368530559024',
-    projectId: 'flutter-application-7a708',
-    storageBucket: 'flutter-application-7a708.appspot.com',
-  );
-
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyC2C13XUpJz97rWFa-cO7pvKktHEd1cjew',
-    appId: '1:368530559024:ios:020bbe69a44ab0a50a5df5',
-    messagingSenderId: '368530559024',
-    projectId: 'flutter-application-7a708',
-    storageBucket: 'flutter-application-7a708.appspot.com',
-    iosClientId: '368530559024-or0r75rbqf7lcqbp0rpp9kos4am4jas7.apps.googleusercontent.com',
->>>>>>> 1d1f2c53a143b849798c52179f2aa9483842915e
     iosBundleId: 'com.example.hackthonApplication',
   );
 }

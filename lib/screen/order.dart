@@ -21,7 +21,7 @@ class _OrderScreenState extends State<OrderScreen> {
           onTap: (() {
             Navigator.pop(context);
           }),
-          child: Padding(
+          child: const Padding(
             padding: EdgeInsets.only(left: 0),
             child: Image(
               image: AssetImage("assets/images/backward button.png"),
@@ -32,7 +32,7 @@ class _OrderScreenState extends State<OrderScreen> {
       body: Center(
         child: Column(
           children: [
-            Image(image: AssetImage('assets/images/Ellipse 25.png')),
+            const Image(image: AssetImage('assets/images/Ellipse 25.png')),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.05,
             ),
@@ -41,7 +41,7 @@ class _OrderScreenState extends State<OrderScreen> {
               style: TextStyle(
                   fontWeight: FontWeight.w800,
                   fontSize: 36,
-                  color: AppColors.app_Green_Color),
+                  color: AppColors.appGreenColor),
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.05,
@@ -51,7 +51,7 @@ class _OrderScreenState extends State<OrderScreen> {
               style: TextStyle(
                   fontWeight: FontWeight.w500,
                   fontSize: 14,
-                  color: AppColors.app_black_Color),
+                  color: AppColors.appBlackColor),
             ),
             Image.asset(
               'assets/images/order_Logo.png',
@@ -65,9 +65,9 @@ class _OrderScreenState extends State<OrderScreen> {
                 width: MediaQuery.of(context).size.width * 0.90,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(30),
-                  color: AppColors.app_Green_Color,
+                  color: AppColors.appGreenColor,
                 ),
-                child: Center(
+                child:const Center(
                     child: Text(
                   'KIRIM',
                   style: TextStyle(
